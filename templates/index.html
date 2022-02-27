@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="alert alert-primary" role="alert">
+    Hey my name is Car Quality. I am🧑 trained to help you to buy💵your best car🚗!
+  </div>
+
+<form action="/predict" method="post">
+    <br>
+<select  class="form-select" aria-label="Default select example" name="buy">
+    <option disabled selected>choose the buying rate of the Car</option>
+    <option value="3">Very High</option>
+    <option value="0">High</option>
+    <option value="2">Medium</option>
+    <option value="1">Low</option>
+  </select>
+  <br>
+  <select  class="form-select" aria-label="Default select example" name ='maint'>
+    <option disabled selected>choose the maintainace rate of the Car</option>
+    <option value="3">Very High</option>
+    <option value="0">High</option>
+    <option value="2">Medium</option>
+    <option value="1">Low</option>
+  </select>
+  <br>
+  <select  class="form-select" aria-label="Default select example" name="lug">
+    <option disabled selected>choose the size of lug boot of the Car</option>
+    <option value="0">Big</option>
+    <option value="1">Medium</option>
+    <option value="2">Small</option>
+  </select>
+  <br>
+  <select class="form-select" aria-label="Default select example" name="safty">
+    <option disabled selected>choose the safty rate of the Car</option>
+    <option value="0">High</option>
+    <option value="1">Medium</option>
+    <option value="2">Low</option>
+  </select>
+
+  <br>
+  <select class="form-select" aria-label="Default select example" name="doors">
+    <option disabled selected>choose the number of doors of the Car</option>
+    <option value="0">Two</option>
+    <option value="1">Three</option>
+    <option value="2">Four</option>
+    <option value="3"> More than 5</option>
+  </select>
+  <br>
+  <select  class="form-select" aria-label="Default select example" name="people">
+    <option disabled selected>choose the number of people the car can take</option>
+    <option value="0">Two</option>
+    <option value="1">Four</option>
+    <option value="2">More than Four</option>
+    
+  </select>
+  <button type="submit" class="btn btn-primary" >Let me predict</button>
+  
+</form>
+{% endblock %}
